@@ -12,7 +12,7 @@ export default function Message({ text }: {
 
     useEffect(() => {
         const length = textArray.length
-        setTimeout(() => {
+        const timeout = setTimeout(() => {
             if(length < text.length) {
                 setTextArray(textArray => [...textArray, text[textArray.length]])
             }
@@ -20,6 +20,7 @@ export default function Message({ text }: {
             //     setTextArray([])
             // }
         }, 200)
+        return () => clearTimeout(timeout)
     }, [textArray])
 
 

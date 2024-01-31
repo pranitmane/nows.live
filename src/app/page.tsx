@@ -1,8 +1,14 @@
 import Message from './components/message'
+import icon from './icon.png'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center p-24 gap-20">
+      <Link className='absolute top-5 left-5' href="/">
+      <Image src={icon} alt="icon" width={20} height={20} />
+      </Link>
       <div className="p-14 relative z-0">
         <div className="absolute rounded-xl w-full h-full blur-3xl bg-gradient-to-r from-[#66B3FF]/30 to-[#FFB366]/30 top-0 left-0 z-[-10]">
         </div>
